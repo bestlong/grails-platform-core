@@ -8,13 +8,12 @@ This uses the underlying security provider to test the condition.
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <s:ifNotLoggedIn>
     Please log in!
 </s:ifNotLoggedIn>
-{docx}
+{code}
 
 h2. Attributes
 
 None
-

@@ -10,11 +10,11 @@ The [menu|navigationTags] tag is used internally to render the menu, see that do
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <nav:primary/>
 
 <nav:primary id="primary-nav"/>
-{docx}
+{code}
 
 Note that all the features of the [menu|navigationTags] tag are available but are not demonstrated here.
 

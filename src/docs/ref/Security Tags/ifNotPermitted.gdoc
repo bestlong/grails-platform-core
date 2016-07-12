@@ -8,11 +8,11 @@ This uses the underlying security provider to test the condition.
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <s:ifNotPermitted role="ADMIN">
    Sorry you can't do this
 </s:ifNotPermitted>
-{docx}
+{code}
 
 h2. Attributes
 
@@ -20,4 +20,3 @@ h2. Attributes
 *Name* | *Purpose*
 role | Required - The role to test for. If the user does not have this role the body will be rendered
 {table}
-

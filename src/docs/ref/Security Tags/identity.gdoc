@@ -8,11 +8,10 @@ This uses the underlying security provider to provide the identity. Typically it
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 You are logged in as: <s:identity/>
-{docx}
+{code}
 
 h2. Attributes
 
 None
-

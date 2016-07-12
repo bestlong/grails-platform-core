@@ -2,13 +2,13 @@ h3. Linking tags
 
 The [smartLink|uiExtensionTags] tag renders links for controllers and actions, automatically working out the text of the link using i18n.
 
-{docx:xml}
+{code:xml}
 <%-- Link to default action of BooksController --%>
 <p:smartLink controller="books"/>
 
 <%-- Link to list action of current controller --%>
 <p:smartLink action="list"/>
-{docx}
+{code}
 
 These will use i18n messages located by convention of the form: @action.*controllerName*.*actionName*@
 
@@ -16,9 +16,9 @@ h3. Label tag
 
 The label tag will render a <label> with the text optionally loaded from i18n:
 
-{docx:xml}
+{code:xml}
 <p:label text="field.user.name"/>
-{docx}
+{code}
 
 See [label|uiExtensionTags] for full details of the attributes, which include passing arguments to the i18n message.
 
@@ -26,9 +26,9 @@ h3. Button tag
 
 The button tag will render a text-based button using either a <button>, <input type="submit"> or <a> tag, with the text optionally loaded from i18n:
 
-{docx:xml}
+{code:xml}
 <p:button text="button.save"/>
-{docx}
+{code}
 
 See [button|uiExtensionTags] for full details of the attributes, which include setting the kind of button rendered and passing arguments to the i18n message.
 
@@ -36,9 +36,9 @@ h3. Display message tag
 
 The displayMessage tag works with the @displayMessage@ and @displayFlashMessage@ controller methods to make it easy to render messages to the user in a uniform way.
 
-{docx:xml}
+{code:xml}
 <p:displayMessage/>
-{docx}
+{code}
 
 See [displayMessage|uiExtensionTags] for full details of the attributes and the [displayMessage|uiExtensionMethods] and [displayFlashMessage|uiExtensionMethods] controller methods.
 
@@ -53,4 +53,3 @@ There are several simple but useful site branding tags included. Commonly to be 
 * [siteURL|uiExtensionTags] - Renders an absolute URL for the root of the site
 * [siteLink|uiExtensionTags] - Renders an absolute link to the site, with the site name as the link text
 * [year|uiExtensionTags] - Renders the current year, for use in copyright footers
-

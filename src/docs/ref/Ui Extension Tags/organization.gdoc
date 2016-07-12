@@ -10,10 +10,10 @@ The Config value is set in @plugin.platformCore.organization.name@
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <p:organization/>
 <p:organization encodeAs="JavaScript"/>
-{docx}
+{code}
 
 h2. Attributes
 
@@ -21,4 +21,3 @@ h2. Attributes
 *Name* | *Purpose*
 encodeAs | Optional - which codec to use when encoding the output. Default is HTML.
 {table}
-

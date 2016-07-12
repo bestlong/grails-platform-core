@@ -6,7 +6,7 @@ Artefacts can use this to access the configuration values that pertain to their 
 
 Example:
 
-{docx}
+{code}
 class MyPluginService {
     def doSomething() {
        if (pluginConfig.enabled) {
@@ -14,6 +14,6 @@ class MyPluginService {
        }
     }
 }
-{docx}
+{code}
 
 This provides a valuable shortcut to accessing config that removes the responsibility to maintain this information from your code.

@@ -19,4 +19,3 @@ h2. Example
 h2. Attributes
 
 All attributes are passed through to g:link - the body of the g:link is the result of the [siteName|uiExtensionTags] tag.
-

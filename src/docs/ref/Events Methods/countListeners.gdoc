@@ -7,10 +7,10 @@ It returns an int number of removed listeners.
 
 h2. Usage
 
-{docx}
+{code}
 //display the number of listeners in TestService
 println countListeners("*:my.TestService")
-{docx}
+{code}
 
 h2. Arguments
 

@@ -7,7 +7,7 @@ It returns a stringified [ListenerId|guide:listening].
 
 h2. Usage
 
-{docx}
+{code}
 class SomeController{
 
     def testInlineListener = {
@@ -26,7 +26,7 @@ class SomeController{
         render "$listener registered"
     }
 }
-{docx}
+{code}
 
 h2. Arguments
 

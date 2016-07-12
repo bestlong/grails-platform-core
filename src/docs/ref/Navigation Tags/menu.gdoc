@@ -8,7 +8,7 @@ The menu tag is used internally by the primary/secondary tags and can be called 
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <nav:menu/>
 
 <nav:menu id="main-nav"/>
@@ -38,7 +38,7 @@ h2. Example
          </g:if>
     </li>
 </nav:menu>
-{docx}
+{code}
 
 Note that with custom rendering the body is responsible for rendering any nested children also.
 h2. Attributes
@@ -53,4 +53,3 @@ depth | Optional depth of navigation to render. Starting from the scope, it will
 forceChildren | Optional Boolean indicating whether or not to render all nested children even if the parent is not active
 custom | Optional Boolean indicating that you want to handle rendering of the @<li>@ items directly. The body of the menu tag is used to render each item, and the body is passed the values @item@ (the NavigationItem instance), @linkArgs@ the map of arguments to pass to @g:link@ to create a link to the target of the item, as well as @active@ and @enabled@ booleans for the item.
 {table}
-

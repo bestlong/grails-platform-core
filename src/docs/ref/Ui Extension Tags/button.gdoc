@@ -8,13 +8,13 @@ The text is loaded from namespaced i18n using the same logic as the [text|uiExte
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <p:button>OK</p:button>
 <p:button text="button.ok"/>
 <p:button disabled="true">Cancel</p:button>
 <p:button kind="anchor" href="#" text="button.cancel"/>
 <p:button kind="submit" text="button.send.to" textArgs="${recipient.name}"/>
-{docx}
+{code}
 
 The optional body is used as the default text of the label if the i18n code does not resolve using the [text|uiExtensionTags] tag message resolution rules.
 

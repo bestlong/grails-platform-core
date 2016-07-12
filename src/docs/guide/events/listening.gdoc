@@ -6,7 +6,7 @@ h3. Defining listeners at compile time
 
 Within Grails services you can use the *@Listener* annotation. It takes a *topic* string, but you can omit it and use the *method name* as the topic to listen for:
 
-{docx}
+{code}
 class SomeService{
 
    @grails.events.Listener(topic = 'userLogged')
@@ -18,12 +18,12 @@ class SomeService{
    def mailSent(){
   }
 }
-{docx}
+{code}
 
 Event methods can define a *single argument*, and the value is the object sent with the event. Usually this is the "subject" of the event.
 However an event is carried by an enveloppe called EventMessage which contains several useful metadata like additionnal headers, current topic :
 
-{docx}
+{code}
 class SomeService{
 
    @grails.events.Listener(topic = 'userLogged')
@@ -33,7 +33,7 @@ class SomeService{
     println userMessage.data // displays data
    }
 }
-{docx}
+{code}
 
 If a listener argument type is not assignable to an event data type, the event *silently skips the mismatching listener*. If you want to catch
 every event types, use Object type or if the argument is not necessary, do not declare it.
@@ -47,7 +47,7 @@ h3. Namespacing
 
 Your declared events belongs to the *app* namespace, unless you tune it using the *namespace* argument or the Events DSL we will introduce later.
 
-{docx}
+{code}
 class SomeService{
 
    @grails.events.Listener(topic = 'userLogged', namespace = 'security')
@@ -59,17 +59,17 @@ class SomeService{
    def afterInsert(User user){
   }
 }
-{docx}
+{code}
 
 Remember that you will need to specify the scope when triggering events if you customize it with a different value than *app* :
 
-{docx}
+{code}
 class SomeController{
    def myAction(){
         event for:'security', topic:'userLogged', data:session.user
    }
 }
-{docx}
+{code}
 
 {warning}
 It's mandatory to declare namespace when using events bus from a plugin in order to avoid any conflicts.
@@ -79,7 +79,7 @@ h3. Proxy (AOP) support
 
 By default, listeners try to call the original method (unproxified bean). Using *proxySupport* you can tweak this setting :
 
-{docx}
+{code}
 class SomeService{
 
    static transactional = true
@@ -90,13 +90,13 @@ class SomeService{
    }
 
 }
-{docx}
+{code}
 
 h3. Dynamic listeners
 
 Some edge cases need runtime registration. If you meet this use case, use the injected [on|eventsMethods] method :
 
-{docx}
+{code}
 class SomeController{
 
  def testInlineListener = {
@@ -115,13 +115,13 @@ class SomeController{
         render "$listener registered"
  }
 }
-{docx}
+{code}
 
 h3. Wildcard support
 
 Capturing a wider group of events can be useful, specially for monitoring purposes. It's possible to listen for multiple topics/namespaces in a single shot using *wildcard as the last character*.
 
-{docx}
+{code}
 class SomeService{
 
  @grails.events.Listener(namespace='role-*', topic = 'chat-*')
@@ -130,7 +130,7 @@ class SomeService{
       println userMessage.event
    }
 }
-{docx}
+{code}
 
 {note}
 This feature will probably evolve to a smarter implementation behaving like UrlMappings and authorizing substring captures
@@ -147,7 +147,7 @@ The above square brackets determine each optional part of the sequence id thus a
 This pattern is useful when using *countListeners*, *removeListeners* or *extensions*. For instance, overriding
 a generated *channel* with *events-si* plugin requires to use @namespace://topic@ if _namespace_ is different from "app".
 Another example to count listeners:
-{docx}
+{code}
 //count every listeners subscribed to 'mytopic' inside TestService
 countListeners("mytopic:my.TestService")
 
@@ -156,7 +156,7 @@ countListeners("gorm://*")
 
 //remove every listeners in TestService
 removeListeners("*:my.TestService")
-{docx}
+{code}
 
 h3. Reloading in Development mode
 

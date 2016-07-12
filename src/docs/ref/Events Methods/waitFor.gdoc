@@ -7,7 +7,7 @@ It returns the same array of passed [Event Replies|api:org.grails.plugin.platfor
 
 h2. Usage
 
-{docx}
+{code}
 class SomeController{
 
    def logout(){
@@ -29,7 +29,7 @@ class SomeController{
       event('logout', session.user).waitFor(2000) //blocks event for maximum 2 seconds
    }
 }
-{docx}
+{code}
 
 h2. Arguments
 

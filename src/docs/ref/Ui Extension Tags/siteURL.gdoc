@@ -10,19 +10,18 @@ The default behaviour calls @g:createLink@ with @absolute="true"@ and a uri of "
 
 You can have a site marketing URL different from your app's @grails.serverURL@ value by specifying the following configuration value:
 
-{docx}
+{code}
 plugin.platformCore.site.url = 'http://marketing.oursite.com'
-{docx}
+{code}
 
 See [siteLink|uiExtensionTags] for details of the site link tag that uses this and @p:siteName@.
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <p:siteURL/>
-{docx}
+{code}
 
 h2. Attributes
 
 None
-

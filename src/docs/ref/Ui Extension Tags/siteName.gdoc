@@ -10,10 +10,10 @@ Plugins and views can use this to refer to your web application.
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <p:siteName/>
 <p:siteName encodeAs="JavaScript"/>
-{docx}
+{code}
 
 h2. Attributes
 

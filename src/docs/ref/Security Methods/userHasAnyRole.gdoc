@@ -9,7 +9,7 @@ have installed.
 
 h2. Usage
 
-{docx}
+{code}
 class PurchaseService {
     void updatePurchase(Purchase p) {
         if (userHasAnyRole(['ROLE_USER', 'ROLE_ADMIN'])) {
@@ -18,7 +18,7 @@ class PurchaseService {
     }
     …
 }
-{docx}
+{code}
 
 h2. Arguments
 

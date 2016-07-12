@@ -5,7 +5,7 @@ Navigation artefacts are groovy scripts end in the name "Navigation" in @grails-
 Here's an example for the various ways to use the DSL to declare scopes and items:
 
 Example contents of @grails-app/conf/AppNavigation.groovy@:
-{docx}
+{code}
 navigation = {
     // Declare the "app" scope, used by default in tags
     app {
@@ -47,7 +47,7 @@ navigation = {
         }
     }
 }
-{docx}
+{code}
 
 Using tags such as the [primary|navigationTags] and [secondary|navigationTags] navigation tags you can render all the page elements you need.
 
@@ -69,26 +69,26 @@ The top-level method calls that pass a Closure define root scopes in the navigat
 
 The "app" scope is a prime example of this:
 
-{docx}
+{code}
 navigation = {
     app {
         home controller:'test', data:[icon:'house']
     }
 }
-{docx}
+{code}
 
 By default scopes defined by Navigation artefacts within plugins are automatically namespaced to prevent collisions with application namespaces.
 
 Thus the scope "app" in a plugin called "SpringSecurityCore" would become the scope "plugin.springSecurityCore.app". If a plugin defines the scope with the @global:true@ argument, this will not happen:
 
-{docx}
+{code}
 // Example of a plugin exposing a root scope without namespacing
 navigation = {
     app(global:true) {
         contact controller:'test', data:[icon:'mail']
     }
 }
-{docx}
+{code}
 
 h4. Nested method calls - defining navigation items
 
@@ -123,7 +123,7 @@ The arguments:
 
 Typically you will want to hide items if the user is not permitted to see them. An example of doing this with Spring Security Core:
 
-{docx}
+{code}
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 def loggedIn = { ->
@@ -154,7 +154,7 @@ navigation = {
         profile controller:'auth', action:'profile', visible: loggedIn
     }
 }
-{docx}
+{code}
 
 Note how the Closures are "def"'d in the script to make them reusable and reachable within the DSL
 
@@ -194,13 +194,13 @@ Typically you would use this to associate some extra data such as an icon name, 
 
 Just put the values into the "data" Map:
 
-{docx}
+{code}
 navigation = {
     app {
         home controller:'test', action:'home', data:[icon:'house']
     }
 }
-{docx}
+{code}
 
 h4. Ordering of items
 
@@ -210,7 +210,7 @@ However you may wish to manually order items, for example so that plugins (or th
 
 Just pass the integer value in the @order@ argument:
 
-{docx}
+{code}
 navigation = {
     app {
         home controller:'test', action:'home', order:-1000
@@ -222,4 +222,4 @@ navigation = {
             trash action:'trash', order:99999999 // always last
         }
     }
-{docx}
+{code}

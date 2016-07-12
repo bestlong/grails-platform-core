@@ -14,11 +14,11 @@ Note the the @scope@ is by default inherited from that resolved by the preceding
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <nav:secondary/>
 
 <nav:secondary id="secondary-nav"/>
-{docx}
+{code}
 
 Note that all the features of the [menu|navigationTags] tag are available but are not demonstrated here.
 

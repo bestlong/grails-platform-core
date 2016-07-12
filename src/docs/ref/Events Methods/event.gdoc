@@ -6,7 +6,7 @@ This method returns [EventReply|api:org.grails.plugin.platform.events.EventReply
 
 h2. Usage
 
-{docx}
+{code}
 class SomeController{
 
    def logout(){
@@ -23,7 +23,7 @@ class SomeController{
       event(topic:"afterAfterLogout", onError:errs)
    }
 }
-{docx}
+{code}
 
 h2. Arguments
 

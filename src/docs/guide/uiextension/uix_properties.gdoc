@@ -5,11 +5,11 @@ These properties are [pluginRequestAttributes|uiExtensionProperties], [pluginSes
 
 They allow you to access these attributes from plugin code without having to worry about key name clashes with other plugins or the application:
 
-{docx}
+{code}
 class MyController {
     def beginPasswordReset = {
         pluginSession.resetMode = true
         pluginFlash.resetToken = resetTokenFactory.newTicket()
     }
 }
-{docx}
+{code}

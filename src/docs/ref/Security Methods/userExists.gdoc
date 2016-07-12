@@ -11,7 +11,7 @@ If a provide does not implement ACLs this will return true.
 
 h2. Usage
 
-{docx}
+{code}
 class MessagesService {
     void findUserMessages(String user) {
         if (userExists(user)) {
@@ -20,7 +20,7 @@ class MessagesService {
     }
     …
 }
-{docx}
+{code}
 
 h2. Arguments
 

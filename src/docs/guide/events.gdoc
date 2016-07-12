@@ -20,7 +20,7 @@ and get maximum flexibility when required :
 
 In a nutshell, you will :
 * Send events :
-{docx}
+{code}
 class UserController{
 
    def registration(){
@@ -45,10 +45,10 @@ class UserController{
          }
   }
 }
-{docx}
+{code}
 
 * Write listeners (or event handler, or event reactor or whatever you call it):
-{docx}
+{code}
 class UserService{
 
    //use method name 'mailRegistration' as topic name
@@ -72,4 +72,4 @@ class UserService{
         }
   }
 }
-{docx}
+{code}

@@ -10,9 +10,9 @@ To render a button that will take the user to this page, see [signupButton|secur
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <s:createSignupLink/>
-{docx}
+{code}
 
 h2. Attributes
 

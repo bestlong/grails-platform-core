@@ -6,13 +6,13 @@ This tag renders a link using i18n conventions for the link text, using the [tex
 
 h2. Example
 
-{docx:xml}
+{code:xml}
 <%-- Link to default action of BooksController --%>
 <p:smartLink controller="books"/>
 
 <%-- Link to list action of current controller --%>
 <p:smartLink action="list"/>
-{docx}
+{code}
 
 These will use i18n messages located by convention of the form: @action.*controllerName*.*actionName*@
 
@@ -26,4 +26,3 @@ textPlugin | | Optional plugin name in beanNameCase. Overrides the automatic sco
 {table}
 
 All other attributes are passed through to @g:link@
-

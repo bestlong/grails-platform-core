@@ -7,10 +7,10 @@ It returns an int number of removed listeners.
 
 h2. Usage
 
-{docx}
+{code}
 //remove every listeners in TestService
 removeListeners("*:my.TestService")
-{docx}
+{code}
 
 h2. Arguments
 
